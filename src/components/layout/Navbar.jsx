@@ -61,7 +61,7 @@ function Navbar() {
                 </li>
 
                 <li>
-                    <NavLink to="/bookademo"
+                    <NavLink to="/about"
                         className={({ isActive }) =>
                             isActive ? "active-nave" : ""} >
                         About

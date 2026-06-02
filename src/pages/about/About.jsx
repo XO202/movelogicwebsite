@@ -1,6 +1,7 @@
-import "./bookademo.css";
+import "./about.css";
 import { useState } from "react";
-import banner from "../../assets/demo.png"; 
+import banner from "../../assets/demo.png";
+import aidetect from "../../assets/feature_img.png";
 import CTA from "../../components/sections/CTA";
 
 /* ── HERO SECTION ── */
