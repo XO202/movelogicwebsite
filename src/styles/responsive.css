@@ -1,0 +1,15 @@
+
+  /* Responsive basics */
+  @media (max-width: 1024px) {
+    .ml-hero { grid-template-columns: 1fr; padding: 48px 24px; }
+    .ml-detection { grid-template-columns: 1fr; padding: 48px 24px; }
+    .ml-features { grid-template-columns: 1fr 1fr; padding: 48px 24px; }
+    .workflow-steps { grid-template-columns: repeat(1, 1fr); }
+    .workflow-step:not(:last-child)::after { display: none; }
+    .stats-grid { grid-template-columns: repeat(1, 1fr);  gap: 16px;}
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .ml-testi-inner { grid-template-columns: 1fr; }
+    .ml-cta-inner { flex-direction: column; }
+    .ml-nav { padding: 12px 24px; }
+    .ml-nav-links { display: none; }
+  }
