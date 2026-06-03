@@ -124,7 +124,7 @@
     z-index: 0;
   }
   
-  .step-arrow{
+  .step-arrow1{
     position:absolute;
     top:19px;
     right:-28px;
@@ -133,7 +133,7 @@
   .workflow-step:last-child .step-item .step-line {
     display: none;
 }
-.workflow-step:last-child .step-item .step-arrow {
+.workflow-step:last-child .step-item .step-arrow1 {
   display: none;
 }
 .step-number {
@@ -179,7 +179,7 @@
     justify-content: center;
   }
 
-  .step-arrow,
+  .step-arrow1,
   .step-line {
     display: none;
   }

@@ -68,7 +68,7 @@ function Workflow() {
                                                  {icon}
                                         </div>
                                         <div className="step-line"></div>
-                                            <div className="step-arrow">
+                                            <div className="step-arrow1">
                                                 <svg width="22" height="10" viewBox="0 0 22 10" fill="none"><path d="M1 5H20" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2"></path><path d="M16 1L20 5L16 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                             </div>
                                           <div className="step-number">  {num}</div>
