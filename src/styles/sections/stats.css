@@ -2,7 +2,7 @@
   /* STATS */
   .ml-stats {
     border: 1px solid var(--border); 
-    background: var(--bg-secondary);
+    background: var(--theme-bg2);
     margin: 0 48px 0;
     max-width: 100%;
     border-radius: 20px;

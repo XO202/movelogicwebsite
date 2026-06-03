@@ -156,7 +156,7 @@
 
 /* ── FEATURE TABS ── */
 .ftabs-wrap {
-    background: var(--bg2);
+    background: var(--theme-bg2);
     margin: 0 48px 30px;
     border-radius: 10px;
     max-width: 100%;
@@ -496,7 +496,7 @@
 
 /* Items list card */
 .items-card {
-    background: var(--bg2);
+    background: var(--theme-bg2);
     border: 1px solid var(--border);
     border-radius: var(--r12);
     padding: 16px;
@@ -561,7 +561,7 @@
 
 /* Volume visual */
 .vol-card {
-    background: var(--bg2);
+    background: var(--theme-bg2);
     border: 1px solid var(--border);
     border-radius: var(--r12);
     padding: 10px 15px;
@@ -679,7 +679,7 @@
 }
 
 .chal-list-card {
-    background: var(--bg2);
+    background: var(--theme-bg2);
     border: 1px solid var(--border);
     border-radius: var(--r12);
     padding: 16px;
@@ -767,7 +767,7 @@ img.ft2 {
 
 /* Estimate visual */
 .est-card {
-    background: var(--bg2);
+    background: var(--theme-bg2);
     border: 1px solid var(--border);
     border-radius: var(--r12);
     padding: 16px;
@@ -869,7 +869,7 @@ img.ft2 {
 }
 
 .cta-left p {
-    font-size: 13.5px;
+    font-size: 14px;
     color: var(--txt2);
     line-height: 1.7;
     max-width: 380px;
@@ -930,7 +930,7 @@ img.ft2 {
 }
 .estimate-card {
     width: 100%; 
-    background: var(--bg2);
+    background: var(--theme-bg2);
     border-radius: 15px;
     padding: 18px;
     border: 1px solid rgba(0, 212, 255, 0.08);
@@ -1241,8 +1241,7 @@ img.ft2 {
         font-size: 14px;
     }
 
-    .hero-pills {
-        flex-direction: column;
+    .hero-pills { 
         gap: 16px;
     }
 

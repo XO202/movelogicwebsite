@@ -3,6 +3,7 @@
   .ml-footer {
     background: var(--bg-primary);
     border-top: 1px solid var(--border);
+    margin-top: 15px;
   }
   .ml-footer-inner {
     max-width: 100%;

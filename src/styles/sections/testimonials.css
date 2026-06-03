@@ -1,7 +1,7 @@
 
   /* TESTIMONIALS */
   .ml-testimonials {
-    background: var(--bg-secondary);
+    background: var(--theme-bg2);
     border: 1px solid var(--border);
     margin: 0 48px; 
     border-radius: 22px;

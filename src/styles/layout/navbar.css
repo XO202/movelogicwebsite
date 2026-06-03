@@ -45,8 +45,7 @@
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    transition: color 0.2s;
-    padding-bottom: 15px;
+    transition: color 0.2s; 
   }
   .ml-nav-links a:hover { color: var(--text-primary); }
   .ml-nav-actions { display: flex; gap: 12px; align-items: center; }
@@ -81,6 +80,137 @@
   .btn-primary:hover { background: #00e0ff; transform: translateY(-1px); }
 
   a.active-nav {
-    color: white;
-    border-bottom: 1px solid var(--accent);
+    color: white; 
   }
+  /* Hide toggle on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile Actions */
+.mobile-actions {
+  display: none;
+}
+
+@media (max-width: 991px) {
+
+  .ml-nav {
+      position: relative;
+      padding: 15px 20px;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .desktop-actions {
+      display: none;
+  }
+  img.login-logo {
+    height: 80px;
+}
+  .ml-nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--theme-bg2);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      gap: 15px;
+      display: none;
+      border-top: 1px solid rgba(255,255,255,.08);
+      z-index: 999;
+  }
+
+  .ml-nav-links.show-menu {
+      display: flex;
+  }
+
+  .ml-nav-links li {
+      width: 100%;
+  }
+ 
+
+  .mobile-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;
+  }
+
+  .mobile-actions .btn-outline,
+  .mobile-actions .btn-primary {
+      width: 100%;
+  }
+}
+.ml-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  background: rgba(10, 15, 20, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+/* =====================================
+   ULTRA WIDE SCREENS (1900px+)
+===================================== */
+@media screen and (min-width: 1900px) {
+
+  .ml-nav {
+    padding: 8px 80px;
+  }
+
+  /* Logo */
+  img.login-logo {
+    height: 130px;
+  }
+
+  .ml-logo {
+    gap: 12px;
+    font-size: 24px;
+  }
+
+  .ml-logo-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  /* Navigation Links */
+  .ml-nav-links {
+    gap: 50px;
+  }
+
+  .ml-nav-links a {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  /* Action Buttons */
+  .ml-nav-actions {
+    gap: 18px;
+  }
+
+  .btn-outline,
+  .btn-primary {
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+
+  /* Active Menu */
+  a.active-nav {
+    font-weight: 700;
+  }
+}
