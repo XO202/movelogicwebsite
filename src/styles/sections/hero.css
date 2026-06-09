@@ -330,13 +330,7 @@
       max-width: 900px;
       margin: 0 auto;
   }
-}
-@media (max-width: 1200px) {
-
-  .hero-right img,
-  .banner-img {
-      max-width: 90%;
-      margin: 0 auto;
-      display: block;
+  .hero-right-image {
+    display: none;
   }
 }
