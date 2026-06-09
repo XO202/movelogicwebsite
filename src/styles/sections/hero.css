@@ -296,3 +296,47 @@
       height: 320px;
   }
 }
+@media (max-width: 1200px) {
+
+  .ml-hero {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+  }
+
+  .hero-left {
+      max-width: 100%;
+  }
+
+  .hero-title {
+      max-width: 100%;
+  }
+
+  .hero-subtitle {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .hero-actions {
+      justify-content: center;
+  }
+
+  .hero-features {
+      justify-content: center;
+  }
+
+  .hero-right {
+      max-width: 900px;
+      margin: 0 auto;
+  }
+}
+@media (max-width: 1200px) {
+
+  .hero-right img,
+  .banner-img {
+      max-width: 90%;
+      margin: 0 auto;
+      display: block;
+  }
+}
