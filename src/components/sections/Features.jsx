@@ -13,15 +13,15 @@ const cards = [
     image: feature1,
   },
   {
-    tag: "ESTIMATE MANAGEMENT",
+    tag: "Estimate Review & Approval",
     title: "You're in control of every estimate.",
-    desc: "Control pricing visibility, manage internal approvals, and track customer decisions.",
+    desc: "Review AI-generated estimates, validate inventory data, and approve pricing before sharing with customers.",
     image:feature4,
   },
   {
-    tag: "OPERATIONAL ACCURACY",
+    tag: "Operational Insights & Accuracy",
     title: "Capture what others miss.",
-    desc: "Identify real-world access challenges and service requirements upfront.",
+    desc: "Monitor inventory accuracy, survey quality, and operational performance through centralized reporting.",
     image:feature2,
   },
   {

@@ -2,120 +2,70 @@ import '../../styles/sections/testimonials.css'
 
 function Testimonials() {
 
-    const testiData = [
+    const benefits = [
         {
-            text: "The remote survey flow is a game changer. Our customers love how easy and modern it is.",
-            name: "Sarah T.",
-            role: "General Manager",
-            company: "Premium Movers",
-            city: "Wellington",
+          title: "Faster Survey Completion",
+          icon: "⚡",
+          description:
+            "Reduce survey time with AI-assisted workflows and streamlined data collection.",
         },
         {
-            text: "We reduced underquoting and operational surprises. Our profit margins have improved.",
-            name: "James R.",
-            role: "Director",
-            company: "Best Moves",
-            city: "New Zealand",
+          title: "Reduced Missed Inventory",
+          icon: "📦",
+          description:
+            "Improve inventory accuracy by automatically detecting household items from photos.",
         },
         {
-            text: "MoveLogic AI understands our workflow better than any other platform we've used.",
-            name: "Daniel K.",
-            role: "Operations Manager",
-            company: "Wide Moves",
-            city: "Auckland",
+          title: "Better Operational Visibility",
+          icon: "📊",
+          description:
+            "Track inventory, survey progress, and operational challenges from one platform.",
         },
-    ]
+        {
+          title: "Consistent Estimating Process",
+          icon: "✅",
+          description:
+            "Standardize estimator reviews and pricing workflows across every survey.",
+        },
+      ];
 
     return (
 
-        <div className="ml-testimonials">
+        <section className="why-movelogic">
+    <div className="ml-testi-inner">
 
-            <div className="ml-testi-inner">
+        <div className="section-header text-center">
+            <span className="section-tag">
+                WHY MOVELOGIC AI
+            </span>
 
-                <div>
+            <h2 className="section-title-2">
+                Why Moving Companies Choose
+                <span className="accent"> MoveLogic AI</span>
+            </h2>
 
-                    <div className="testi-label">
-                        Trusted by Movers, Backed by Results
-                    </div>
-
-                    <div className="testi-heading">
-                        MoveLogic AI has cut our survey time in half and improved our estimate accuracy significantly.
-                    </div>
-
-                    <div className="testi-stars">
-                        ★★★★★
-                    </div>
-
-                    <div className="testi-rating">
-                        4.9/5 from 120+ reviews
-                    </div>
-
-                </div>
-
-                {
-                    testiData.map(({
-                        text,
-                        name,
-                        role,
-                        company,
-                        city
-                    }) => (
-
-                        <div
-                            key={name}
-                            className="testi-card"
-                        >
-
-                            <div className="testi-quote">
-                            ❝
-                            </div>
-
-                            <div className="testi-text">
-                                {text}
-                            </div>
-
-                            <div className="testi-author">
-
-                                <div className="testi-avatar">
-
-                                    <div className="avatar-circle">
-                                        {name[0]}
-                                    </div>
-
-                                    <div>
-
-                                        <div className="testi-name">
-                                            {name}
-                                        </div>
-
-                                        <div className="testi-role">
-                                            {role}
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div className="testi-company">
-
-                                    <span className="company-tag">
-                                        {company.toUpperCase()}
-                                    </span>
-
-                                    {city.toUpperCase()}
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    ))
-                }
-
-            </div>
-
+            <p className="why-body">
+                Built to help moving companies streamline surveys,
+                improve inventory accuracy, and deliver better customer experiences.
+            </p>
         </div>
+
+        <div className="benefits-grid">
+            {benefits.map((item, index) => (
+                <div className="benefit-card" key={index}>
+                    <div className="benefit-icon">
+                        {item.icon}
+                    </div>
+
+                    <h3>{item.title}</h3>
+
+                    <p>{item.description}</p>
+                </div>
+            ))}
+        </div>
+
+    </div>
+</section>
 
     )
 

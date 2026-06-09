@@ -12,17 +12,11 @@ function Hero() {
                 <div>
 
                     <div className="hero-badge">
-                        ✦ AI-Powered for Moving Companies
+                        AI-Powered for Moving Companies
                     </div>
 
                     <h1 className="hero-title">
-                        The future of
-                        <br />
-                        moving operations
-                        <br />
-                        <span className="accent">
-                            is here.
-                        </span>
+                        The future of  moving operations    <span className="accent">  is here.  </span>
                     </h1>
 
                     <p className="hero-subtitle">

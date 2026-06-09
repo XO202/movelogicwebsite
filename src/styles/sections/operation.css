@@ -1,0 +1,222 @@
+/* =====================================
+   BUILT FOR MODERN OPERATIONS
+===================================== */
+
+.modern-operations {
+    position: relative;
+    padding: 100px 48px;
+    background: transparent;
+}
+
+.operations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+}
+h2.section-title1 {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: clamp(32px, 2vw, 52px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    color: var(--text-white);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Card */
+
+.operation-card {
+    position: relative;
+    overflow: hidden;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    transition: all .35s ease;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.03),
+        0 20px 60px rgba(0,0,0,.25);
+}
+
+.operation-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(0,200,240,.08),
+            transparent 50%
+        );
+
+    pointer-events: none;
+}
+
+.operation-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--border-bright);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.05),
+        0 25px 70px rgba(0,0,0,.35);
+}
+
+/* Icon */
+
+.operation-icon {
+    width: 76px;
+    height: 76px;
+
+    margin: 0 auto 24px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,200,240,.18),
+            rgba(0,112,160,.10)
+        );
+
+    border: 1px solid var(--border-bright);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+    color: var(--accent);
+
+    box-shadow:
+        0 0 25px rgba(0,200,240,.12);
+}
+
+/* Title */
+
+.operation-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+
+    margin: 0;
+
+    line-height: 1.5;
+}
+.operation-card p{
+    margin-top:12px;
+    color:var(--text-secondary);
+    font-size:15px;
+    line-height:1.7;
+}
+/* =====================================
+   LARGE DESKTOP (1900px+)
+===================================== */
+
+@media (min-width: 1900px) {
+
+    .modern-operations {
+        padding: 120px 80px;
+    }
+
+    .operations-grid {
+        gap: 30px;
+    }
+
+    .operation-card {
+        padding: 48px 35px;
+    }
+
+    .operation-card h3 {
+        font-size: 24px;
+    }
+}
+
+/* =====================================
+   DESKTOP
+===================================== */
+
+@media (max-width: 1400px) {
+
+    .operations-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 991px) {
+
+    .modern-operations {
+        padding: 80px 24px;
+    }
+
+    .operations-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .operation-card {
+        padding: 32px 24px;
+    }
+
+    .operation-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    .operation-card h3 {
+        font-size: 20px;
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .modern-operations {
+        padding: 60px 20px;
+    }
+
+    .operations-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 40px;
+    }
+
+    .operation-card {
+        padding: 28px 20px;
+    }
+
+    .operation-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+
+    .operation-card h3 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}

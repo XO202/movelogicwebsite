@@ -30,7 +30,7 @@ function AiDetection() {
                         AI That Understands Moving
                     </div>
 
-                    <h2 className="section-title">
+                    <h2 className="section-title-1">
                         AI detects inventory, volume,
                         and operational risks
                         <span className="accent">

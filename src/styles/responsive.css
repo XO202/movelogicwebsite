@@ -12,13 +12,11 @@
     .workflow-step:not(:last-child)::after { display: none; }
     .stats-grid { grid-template-columns: repeat(1, 1fr);  gap: 16px;}
     .footer-top { grid-template-columns: 1fr 1fr; }
-    .ml-testi-inner { grid-template-columns: 1fr;padding: 20px; }
+    .ml-testi-inner-grid { grid-template-columns: 1fr;padding: 20px; }
     .ml-cta-inner { flex-direction: column; }
     .ml-nav { padding: 12px 24px; }
     .ml-nav-links { display: none; }
-    .hero-title {
-      font-size: 26px;
-    }
+    
   }
   @media screen and (min-width: 1900px) {
     .hero-title {

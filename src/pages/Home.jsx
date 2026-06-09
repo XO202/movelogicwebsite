@@ -5,6 +5,7 @@ import Workflow from '../components/sections/Workflow'
 import Features from '../components/sections/Features'
 import Testimonials from '../components/sections/Testimonials'
 import CTA from '../components/sections/CTA'
+import Surveys from '../components/sections/Surveys'
 
 function Home() {
 
@@ -22,7 +23,7 @@ function Home() {
             <Features />
 
             <Testimonials />
-
+            <Surveys />
             <CTA
                 title="Ready to modernise your moving operations?"
                 description="Book a demo and see how MoveLogic AI can help your team

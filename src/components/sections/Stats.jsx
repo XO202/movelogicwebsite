@@ -4,24 +4,20 @@ function Stats() {
 
     const items = [
         {
-            icon: "⊞",
-            val: "10,000+",
-            desc: "Surveys Completed"
+            icon: "🤖",
+            val: "Remote AI Surveys",
         },
         {
-            icon: "◎",
-            val: "98%",
-            desc: "Estimate Accuracy Improvement"
+            icon: "📦",
+            val: "AI Inventory Detection",
         },
         {
-            icon: "⚡",
-            val: "40%",
-            desc: "Faster Survey Turnaround"
+            icon: "✅",
+            val: "Estimator Review Workflow",
         },
         {
-            icon: "🌐",
-            val: "90+",
-            desc: "Moving Companies Worldwide"
+            icon: "🛡️",
+            val: "Secure Customer Survey Links",
         },
     ]
 

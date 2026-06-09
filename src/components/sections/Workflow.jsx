@@ -12,7 +12,7 @@ function Workflow() {
         {
             num: "02",
             icon: "🔗",
-            title: "Send Link",
+            title: "Send Secure Link",
             desc: "Share a secure link with your customer."
         },
         {
@@ -24,7 +24,7 @@ function Workflow() {
         {
             num: "04",
             icon: "🤖",
-            title: "AI Detects",
+            title: "AI Inventory Detection",
             desc: "AI detects inventory and calculates volume."
         },
         {
