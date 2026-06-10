@@ -2,10 +2,9 @@
 .ml-cta {
   background: linear-gradient(170deg, #007bba, #000919, #000817, #000714);
   border: 1px solid var(--border);
-  margin: 40px 48px;
+  margin: 40px ;
   border-radius: 24px;
-  overflow: hidden;
-  max-width: 100%;
+  overflow: hidden; 
 }
 
 .ml-cta-inner {

@@ -208,7 +208,7 @@ function HowItWorksSection() {
             </div>
 
             {/* Content card */}
-            <div className="step-content-wrap1">
+            <div className="step-content-wrap11">
 
               {/* Text side */}
               <div className="step-text">
@@ -245,16 +245,34 @@ function BuiltForMovers() {
     <div className="bfm-wrap">
       <div className="bfm">
         <div className="bfm-left">
-          <div className="bfm-badge">Built for Movers</div>
-          <div className="bfm-title">Designed for real moving companies.</div>
+          <div className="bfm-badge">Built for Moving Operations</div>
+          <div className="bfm-title">Designed for Real Moving Workflows.</div>
           <button className="bfm-btn">See Platform →</button>
         </div>
-        {[
-          {icon:"⏱",title:"Save Time",desc:"Reduce survey time by up to 70%"},
-          {icon:"🎯",title:"Improve Accuracy",desc:"Up to 98% accuracy with AI detection"},
-          {icon:"🏆",title:"Win More Jobs",desc:"Professional estimates build customer trust"},
-          {icon:"📈",title:"Increase Profit",desc:"Better accuracy leads to higher margins"},
-        ].map(({icon,title,desc})=>(
+        {
+          [
+            {
+              icon:"⏱",
+              title:"Save Time",
+              desc:"Reduce survey time by up to 70%"
+            },
+            {
+              icon:"🎯",
+              title:"Improve Accuracy",
+              desc:"Up to 98% accuracy with AI detection"
+            },
+            {
+              icon:"🏆",
+              title:"Win More Jobs",
+              desc:"Professional estimates build customer trust"
+            },
+            {
+              icon:"📈",
+              title:"Increase Profit",
+              desc:"Better accuracy leads to higher margins"
+            }
+          ]
+        .map(({icon,title,desc})=>(
           <div key={title} className="bfm-stat">
             <div className="bfm-stat-icon">{icon}</div>
             <div>

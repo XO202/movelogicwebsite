@@ -5,13 +5,13 @@
 .ml-footer {
   background: var(--bg-primary);
   border-top: 1px solid var(--border);
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .ml-footer-inner {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 80px 48px 30px;
+  padding: 40px 48px 30px;
 }
 
 /* Top Grid */
@@ -20,7 +20,7 @@
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
   gap: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 /* Brand */
