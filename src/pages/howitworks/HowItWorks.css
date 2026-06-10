@@ -1218,7 +1218,9 @@
 
 /* MOBILE */
 @media (max-width: 576px){
-
+  .ai-det-arrow {
+    display: none;
+}
   .hiw-title{
     font-size:24px;
   }
