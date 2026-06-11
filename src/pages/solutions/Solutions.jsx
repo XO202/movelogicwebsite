@@ -183,12 +183,32 @@ function WhyMoveLogic() {
         <h2 className="why-title">Why moving companies choose MoveLogic AI</h2>
         <div className="why-grid">
           {[
-            { icon: "⏱", title: "Save Time", desc: "Reduce survey time by up to 70%" },
-            { icon: "🎯", title: "Improve Accuracy", desc: "Up to 98% accuracy with AI detection" },
-            { icon: "💵", title: "Reduce Costs", desc: "Fewer re-moves and unexpected costs" },
-            { icon: "📈", title: "Increase Capacity", desc: "Handle more jobs with the same team" },
-            { icon: "⭐", title: "Delight Customers", desc: "Provide accurate ETAs and transparent pricing" },
-          ].map(({ icon, title, desc }) => (
+              {
+                icon: "⏱",
+                title: "Save Time",
+                desc: "Complete surveys in minutes instead of hours with AI-powered inventory detection and automated workflows."
+              },
+              {
+                icon: "🎯",
+                title: "Improve Accuracy",
+                desc: "Reduce missed inventory and estimate surprises with AI-assisted item detection and volume calculations."
+              },
+              {
+                icon: "💰",
+                title: "Reduce Costs",
+                desc: "Lower operational expenses by minimizing repeat visits, manual surveys, and estimation errors."
+              },
+              {
+                icon: "📈",
+                title: "Increase Capacity",
+                desc: "Handle more surveys and estimates without increasing headcount or operational overhead."
+              },
+              {
+                icon: "⭐",
+                title: "Delight Customers",
+                desc: "Deliver a faster, more transparent survey experience with accurate estimates and professional communication."
+              },
+            ].map(({ icon, title, desc }) => (
             <div key={title} className="why-item">
               <div className="why-icon">{icon}</div>
               <div>
@@ -206,31 +226,64 @@ function WhyMoveLogic() {
 /* ── TESTIMONIAL ── */
 function Testimonial() {
   return (
-    <div className="testi-wrap">
-      <div className="testi-inner">
-        <div>
-          <div className="testi-badge">Trusted by Moving Professionals</div>
-          <div className="testi-quote">
-            "MoveLogic AI has completely transformed how we survey and estimate. It's fast, accurate, and our customers love the experience."
-          </div>
-        </div>
-        <div className="testi-author">
-          <div className="avatar">D</div>
-          <div>
-            <div className="testi-name">Daniel K.</div>
-            <div className="testi-role">Operations Manager</div>
-            <div className="testi-role">Wide Moves Auckland</div>
-          </div>
-        </div>
-        <div className="testi-rating">
-          <div className="rating-val">4.9/5</div>
-          <div>
-            <div className="stars">★★★★★</div>
-            <div className="rating-sub">From 120+ reviews</div>
-          </div>
-        </div>
-      </div>
+    <section className="different-wrap">
+  <div className="different">
+    
+    <div className="different-header">
+      <div className="section-badge">Platform Advantages</div>
+      <h2 className="different-title">
+        Why MoveLogic AI Is Different
+      </h2>
+      <p className="different-sub">
+        Built specifically for moving companies, MoveLogic AI combines
+        computer vision, workflow automation, and estimator oversight to
+        deliver faster, more accurate surveys and estimates.
+      </p>
     </div>
+
+    <div className="different-grid">
+
+      {[
+        {
+          icon: "📸",
+          title: "Remote AI Surveys",
+          desc: "Customers complete surveys from any location using their smartphone, reducing the need for on-site visits."
+        },
+        {
+          icon: "📦",
+          title: "AI Inventory Detection",
+          desc: "Automatically identifies furniture, appliances, cartons, and household items from room photos."
+        },
+        {
+          icon: "⚡",
+          title: "Operational Challenge Tracking",
+          desc: "Detect and record stairs, long carries, parking restrictions, lift access, and other moving challenges."
+        },
+        {
+          icon: "🎨",
+          title: "Branded Customer Experience",
+          desc: "Deliver a professional survey experience with your company's branding, messaging, and estimate workflow."
+        }
+      ].map((item) => (
+        <div className="different-card" key={item.title}>
+          <div className="different-icon">
+            {item.icon}
+          </div>
+
+          <h3 className="different-card-title">
+            {item.title}
+          </h3>
+
+          <p className="different-card-desc">
+            {item.desc}
+          </p>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
   );
 }
 /* ── ROOT ── */
@@ -244,7 +297,7 @@ export default function SolutionsPage() {
         <Testimonial />
         <CTA
           title="Find the perfect solution for your moving business"
-          description="MoveLogic AI adapts to your workflow, your team and your goals."
+          description="MoveLogic AI adapts to your workflow, team structure, and business goals"
         />
       </div>
     </>

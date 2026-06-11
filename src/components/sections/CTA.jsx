@@ -1,6 +1,7 @@
 import '../../styles/sections/cta.css'
 
 import hexagon from "../../assets/hexagon.png";
+import { Link } from 'react-router-dom';
 
 function CTA({
     title = "Ready to modernise your operations?",
@@ -26,14 +27,18 @@ function CTA({
                 </div>
 
                 <div className="cta-actions">
-
-                    <button className="btn-cta">
-                        Book a Demo →
-                    </button>
-
+                     <Link 
+                        to="/bookademo">
+                        <button className="btn-cta">
+                            Book a Demo →
+                        </button>
+                    </Link>
+                    <Link 
+                        to="/platform">
                     <button className="btn-cta-outline">
                         See Platform Workflow ⊙
                     </button>
+                    </Link>
 
                 </div>
 

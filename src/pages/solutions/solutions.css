@@ -70,25 +70,40 @@ span.c2 {
 }
 
 .sol-card {
-  background: var(--theme-bg2);
+  background: linear-gradient(
+    180deg,
+    #071120 0%,
+    #050c17 100%
+  );
+
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 24px;
+
   overflow: hidden;
   display: flex;
-  transition: all .22s;
+
+  transition: all .3s ease;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.03),
+    0 20px 60px rgba(0,0,0,.25);
+
   cursor: pointer;
 }
 
 .sol-card:hover {
   border-color: var(--borderB);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, .4);
-}
 
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 0 40px rgba(0,200,240,.08),
+    0 25px 70px rgba(0,0,0,.4);
+}
 .sol-card-img {
-  width: 160px;
+  width: 190px;
   flex-shrink: 0;
-  position: relative; 
+  position: relative;
 }
 
 .sol-card-img-inner {
@@ -248,18 +263,17 @@ span.c2 {
 }
 
 .sol-card-title {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 800;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .sol-card-desc {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--txt2);
-  line-height: 1.65;
-  margin-bottom: 13px;
+  line-height: 1.8;
+  margin-bottom: 16px;
 }
-
 .sol-card-checks {
   display: flex;
   flex-direction: column;
@@ -313,12 +327,23 @@ span.c2 {
   color: #000;
 }
 
-/* ── WHY MOVELOGIC ── */
+/* ── WHY MOVELOGIC ── */ 
 .why-wrap {
-  background: var(--theme-bg2);
+  margin: 40px 48px;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    180deg,
+    #071120 0%,
+    #050c17 100%
+  );
+
   border: 1px solid var(--border);
-  margin: 30px 48px;
-  border-radius: 20px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.03),
+    0 20px 60px rgba(0,0,0,.35);
 }
 
 .why {
@@ -328,12 +353,11 @@ span.c2 {
 }
 
 .why-title {
-  font-size: 30px;
+  font-size: 38px;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
-
 .why-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -341,9 +365,27 @@ span.c2 {
 }
 
 .why-item {
+  background: rgba(255,255,255,.02);
+
+  border: 1px solid var(--border);
+
+  border-radius: 20px;
+
+  padding: 22px;
+
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  flex-direction: column;
+  gap: 14px;
+
+  transition: all .25s ease;
+}
+.why-item:hover{
+  transform:translateY(-4px);
+
+  border-color:var(--borderB);
+
+  box-shadow:
+    0 0 30px rgba(0,200,240,.08);
 }
 
 .why-icon {
@@ -370,94 +412,146 @@ span.c2 {
   color: var(--txt2);
   line-height: 1.55;
 }
+.different-wrap{
+  margin:40px 48px;
 
-/* ── TESTIMONIAL ── */
-.testi-wrap {
-  max-width: 100%;
-  margin: 0 auto;
-  padding:20px 48px;
+  border-radius:24px;
+  padding:60px 48px;
+
+  background:linear-gradient(
+      180deg,
+      #071120 0%,
+      #050c17 100%
+  );
+
+  border:1px solid var(--border);
+
+  box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.03),
+      0 20px 60px rgba(0,0,0,.35);
+}
+ 
+
+.different-header{
+  text-align:center;
+  max-width:850px;
+  margin:0 auto 50px;
 }
 
-.testi-inner {
-  background: var(--theme-bg2);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 44px 52px;
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  gap: 40px;
-  align-items: center;
+.section-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px 14px;
+
+  border-radius:30px;
+
+  background:rgba(0,200,240,.08);
+  border:1px solid var(--borderB);
+
+  color:var(--acc);
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+
+  margin-bottom:18px;
 }
 
-.testi-badge {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--acc);
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  margin-bottom: 16px;
+.different-title{
+  font-size:38px;
+  font-weight:800;
+  margin-bottom:14px;
 }
 
-.testi-quote {
-  font-size: 22px;
-  line-height: 1.5;
-  color: var(--txt);
-  max-width: 560px;
+.different-sub{
+  font-size:16px;
+  line-height:1.8;
+  color:var(--txt2);
 }
 
-.testi-author {
-  display: flex; 
-  align-items: center;
-  gap: 15px; 
-  min-width: 140px;
-  text-align: left;
+.different-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
 }
 
-.avatar {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #00c8f0, #005090);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 700;
-  color: #000;
-  border: 2px solid var(--borderB);
+.different-card{
+  padding:28px;
+
+  border-radius:20px;
+
+  background:rgba(255,255,255,.02);
+
+  border:1px solid var(--border);
+
+  transition:.3s ease;
 }
 
-.testi-name {
-  font-size: 15px;
-  font-weight: 700;
+.different-card:hover{
+  transform:translateY(-5px);
+
+  border-color:var(--borderB);
+
+  box-shadow:
+      0 0 30px rgba(0,200,240,.08);
 }
 
-.testi-role {
-  font-size: 14px;
-  color: var(--txt);
+.different-icon{
+  width:56px;
+  height:56px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:14px;
+
+  background:var(--acc-dim);
+  border:1px solid var(--borderB);
+
+  font-size:24px;
+
+  margin-bottom:18px;
 }
 
-.testi-rating {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  min-width: 120px;
+.different-card-title{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:10px;
 }
 
-.rating-val {
-  font-size: 32px;
-  font-weight: 800;
+.different-card-desc{
+  font-size:14px;
+  line-height:1.8;
+  color:var(--txt2);
 }
 
-.stars {
-  color: var(--yellow);
-  font-size: 18px;
-  letter-spacing: 2px;
+@media(max-width:991px){
+
+  .different-grid{
+      grid-template-columns:repeat(2,1fr);
+  }
 }
 
-.rating-sub {
-  font-size: 14px;
-  color: var(--txt);
+@media(max-width:767px){
+
+  .different-wrap{
+      margin:20px 16px;
+      padding: 0;
+  }
+
+  .different{
+      padding:40px 20px;
+  }
+
+  .different-grid{
+      grid-template-columns:1fr;
+  }
+
+  .different-title{
+      font-size:30px;
+  }
 }
 
 @media(max-width:900px) {
@@ -481,11 +575,7 @@ span.c2 {
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .testi-inner {
-    grid-template-columns: 1fr;
-  }
-
+ 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -509,19 +599,7 @@ span.c2 {
   .why {
     padding: 48px 20px;
   }
-
-  .testi-wrap {
-    padding: 40px 20px;
-  }
-
-  .cta {
-    padding: 40px 20px;
-    flex-direction: column;
-  }
-
-  .footer-inner {
-    padding: 40px 20px 24px;
-  }
+  
 }
 /* =========================================
    RESPONSIVE CSS
@@ -544,10 +622,7 @@ span.c2 {
   .why-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .testi-inner {
-    gap: 25px;
-  }
+ 
 }
 
 /* Tablets */
@@ -591,25 +666,7 @@ span.c2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
-
-  .testi-wrap {
-    padding: 30px 24px;
-  }
-
-  .testi-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 35px 25px;
-  }
-
-  .testi-author,
-  .testi-rating {
-    justify-content: center;
-  }
-
-  .testi-quote {
-    max-width: 100%;
-  }
+ 
 }
 
 /* Mobile */
@@ -681,37 +738,7 @@ span.c2 {
     height: 42px;
     min-width: 42px;
   }
-
-  .testi-wrap {
-    padding: 20px 16px;
-  }
-
-  .testi-inner {
-    padding: 25px 18px;
-    gap: 20px;
-  }
-
-  .testi-badge {
-    font-size: 11px;
-  }
-
-  .testi-quote {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-
-  .rating-val {
-    font-size: 28px;
-  }
-
-  .stars {
-    font-size: 16px;
-  }
-
-  .avatar {
-    width: 48px;
-    height: 48px;
-  }
+  
 }
 
 /* Small Mobile */
@@ -732,15 +759,7 @@ span.c2 {
   .sol-card-body {
     padding: 18px;
   }
-
-  .testi-quote {
-    font-size: 16px;
-  }
-
-  .rating-val {
-    font-size: 24px;
-  }
-
+ 
   .scene-icon-wrap {
     width: 42px;
     height: 42px;
@@ -756,4 +775,42 @@ body {
 
 * {
   box-sizing: border-box;
+}
+@media (min-width:1800px){
+
+  .sol-section,
+  .why,
+  .different{
+      max-width:1700px;
+      margin:0 auto;
+  }
+
+  .sol-title{
+      font-size:72px;
+  }
+
+  .sol-sub{
+      font-size:18px;
+  }
+
+  .sol-card-title{
+      font-size:24px;
+  }
+
+  .sol-card-desc{
+      font-size:17px;
+  }
+
+  .why-title{
+      font-size:48px;
+  }
+
+  .why-item-title{
+      font-size:18px;
+  }
+
+  .why-item-desc{
+      font-size:15px;
+      line-height:1.8;
+  }
 }

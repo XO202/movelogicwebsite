@@ -71,7 +71,79 @@ function WhyExists() {
     </div>
   );
 }
+function WhyWeBuilt() {
+  return (
+    <section className="built-wrap">
+      <div className="built">
 
+        <div className="built-header">
+          <div className="section-badge">
+            Our Story
+          </div>
+
+          <h2 className="built-title">
+            Why We Built MoveLogic AI
+          </h2>
+
+          <p className="built-sub">
+            The moving industry has relied on manual surveys, phone calls,
+            spreadsheets, and fragmented workflows for decades. We believed
+            there had to be a better way.
+          </p>
+        </div>
+
+        <div className="built-grid">
+
+          <div className="built-card">
+            <div className="built-icon">🚛</div>
+
+            <h3>Traditional Surveys Slow Teams Down</h3>
+
+            <p>
+              On-site surveys consume valuable estimator time, create scheduling
+              challenges, and limit how many opportunities a team can handle each day.
+            </p>
+          </div>
+
+          <div className="built-card">
+            <div className="built-icon">📸</div>
+
+            <h3>Customers Expect Digital Experiences</h3>
+
+            <p>
+              Modern customers want convenience, speed, and transparency. Remote
+              surveys make it easier to collect inventory information from anywhere.
+            </p>
+          </div>
+
+          <div className="built-card">
+            <div className="built-icon">🤖</div>
+
+            <h3>AI Can Improve Accuracy</h3>
+
+            <p>
+              Advances in computer vision make it possible to identify inventory,
+              room contents, and moving challenges with greater consistency.
+            </p>
+          </div>
+
+          <div className="built-card">
+            <div className="built-icon">📈</div>
+
+            <h3>Moving Companies Need Better Tools</h3>
+
+            <p>
+              MoveLogic AI was built to help movers work smarter, increase capacity,
+              improve estimate quality, and deliver a better customer experience.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+}
 /* ── ABOUT COMPANY / BELIEVE ── */
 function AboutCompany() {
   return (
@@ -136,79 +208,155 @@ function AboutCompany() {
 /* ── WHAT MAKES DIFFERENT ── */
 function WhatMakesDifferent() {
   return (
-    <div className="diff-wrap">
-      <div className="diff-title">What makes MoveLogic AI different</div>
-      <div className="diff-grid">
-        {/* Card 1 – Survey workflows */}
-        <div className="diff-card">
-          <div className="diff-card-title">On-site and remote AI survey workflows</div>
-          <div className="diff-visual">
-               <img src={about1} alt="MoveLogic Banner" className="" />
-          </div>
-          <div className="diff-desc">Capture photos, answer guided questions, and complete surveys from anywhere.</div>
-        </div>
-        {/* Card 2 – AI detection */}
-        <div className="diff-card">
-          <div className="diff-card-title">AI inventory detection with human review layer</div>
-          <div className="diff-visual">
-            
-                 <img src={about2} alt="MoveLogic Banner" className="" />
-          </div>
-          <div className="diff-desc">AI detects items and rooms. Estimators review, edit, and approve before estimates.</div>
-        </div>
-        {/* Card 3 – Operational challenge */}
-        <div className="diff-card">
-          <div className="diff-card-title">Operational challenge tracking</div>
-          <div className="diff-visual">
-            <div className="dv-challenges">
-              {[["🪜","Stairs","1 Flight"],["🚶","Long Carry","15 m"],["🅿","Parking Distance","30 m"],["🛗","Lift Access","No"]].map(([ic,k,v])=>(
-                <div key={k} className="dv-chal-row">
-                  <span className="dk"><span>{ic}</span>{k}</span><span className="dv2">{v}</span>
-                </div>
-              ))}
+    <div className="difference">
+      <div className="diff-wrap">
+        <div className="diff-title">What makes MoveLogic AI different</div>
+        <div className="diff-grid">
+          {/* Card 1 – Survey workflows */}
+          <div className="diff-card">
+            <div className="diff-card-title">On-site and remote AI survey workflows</div>
+            <div className="diff-visual">
+                <img src={about1} alt="MoveLogic Banner" className="" />
             </div>
+            <div className="diff-desc">Capture photos, answer guided questions, and complete surveys from anywhere.</div>
           </div>
-          <div className="diff-desc">Capture the details that impact moves: access, distance, lifts, stairs, and more.</div>
-        </div>
-        {/* Card 4 – Pricing visibility */}
-        <div className="diff-card">
-          <div className="diff-card-title">Pricing visibility control</div>
-          <div className="diff-visual">
-            <div className="dv-pricing">
-              <div className="dv-p-row"><span className="pk">Show to customer</span><div className="dv-toggle"/></div>
-              {[["Service Type","Included ✓"],["Total Volume","Included ✓"],["Operational Challenges","Included ✓"],["Line Item Pricing","Hidden"]].map(([k,v])=>(
-                <div key={k} className="dv-p-row">
-                  <span className="pk">{k}</span>
-                  <span className={v==="Hidden"?"dv-hidden":""} style={{fontSize:9,color:v==="Hidden"?"var(--txt3)":"var(--green)"}}>{v}</span>
-                </div>
-              ))}
+          {/* Card 2 – AI detection */}
+          <div className="diff-card">
+            <div className="diff-card-title">AI inventory detection with human review layer</div>
+            <div className="diff-visual">
+              
+                  <img src={about2} alt="MoveLogic Banner" className="" />
             </div>
+            <div className="diff-desc">AI detects items and rooms. Estimators review, edit, and approve before estimates.</div>
           </div>
-          <div className="diff-desc">You decide what customers see—keep pricing, margins, and details under your control.</div>
-        </div>
-        {/* Card 5 – Branded portals */}
-        <div className="diff-card">
-          <div className="diff-card-title">Branded partner portals and secure experience</div>
-          <div className="diff-visual">
-            <div className="dv-portal">
-              <div className="dv-portal-hdr">
-                <div className="dv-portal-hdr-ico">◈</div>
-                Your Moving Co.
-              </div>
-              <div className="dv-portal-body">
-                <div className="dv-portal-lbl">Your Estimate</div>
-                <div className="dv-portal-price">$1,620 <span style={{fontSize:10,color:"var(--txt3)",fontFamily:"var(--fb)"}}>NZD</span></div>
-                <button className="dv-portal-btn">View Estimate</button>
+          {/* Card 3 – Operational challenge */}
+          <div className="diff-card">
+            <div className="diff-card-title">Operational challenge tracking</div>
+            <div className="diff-visual">
+              <div className="dv-challenges">
+                {[["🪜","Stairs","1 Flight"],["🚶","Long Carry","15 m"],["🅿","Parking Distance","30 m"],["🛗","Lift Access","No"]].map(([ic,k,v])=>(
+                  <div key={k} className="dv-chal-row">
+                    <span className="dk"><span>{ic}</span>{k}</span><span className="dv2">{v}</span>
+                  </div>
+                ))}
               </div>
             </div>
+            <div className="diff-desc">Capture the details that impact moves: access, distance, lifts, stairs, and more.</div>
           </div>
-          <div className="diff-desc">Deliver a branded, secure portal experience that builds trust and professionalism.</div>
+          {/* Card 4 – Pricing visibility */}
+          <div className="diff-card">
+            <div className="diff-card-title">Pricing visibility control</div>
+            <div className="diff-visual">
+              <div className="dv-pricing">
+                <div className="dv-p-row"><span className="pk">Show to customer</span><div className="dv-toggle"/></div>
+                {[["Service Type","Included ✓"],["Total Volume","Included ✓"],["Operational Challenges","Included ✓"],["Line Item Pricing","Hidden"]].map(([k,v])=>(
+                  <div key={k} className="dv-p-row">
+                    <span className="pk">{k}</span>
+                    <span className={v==="Hidden"?"dv-hidden":""} style={{fontSize:9,color:v==="Hidden"?"var(--txt3)":"var(--green)"}}>{v}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="diff-desc">You decide what customers see—keep pricing, margins, and details under your control.</div>
+          </div>
+          {/* Card 5 – Branded portals */}
+          <div className="diff-card">
+            <div className="diff-card-title">Branded partner portals and secure experience</div>
+            <div className="diff-visual">
+              <div className="dv-portal">
+                <div className="dv-portal-hdr">
+                  <div className="dv-portal-hdr-ico">◈</div>
+                  Your Moving Co.
+                </div>
+                <div className="dv-portal-body">
+                  <div className="dv-portal-lbl">Your Estimate</div>
+                  <div className="dv-portal-price">$1,620 <span style={{fontSize:10,color:"var(--txt3)",fontFamily:"var(--fb)"}}>NZD</span></div>
+                  <button className="dv-portal-btn">View Estimate</button>
+                </div>
+              </div>
+            </div>
+            <div className="diff-desc">Deliver a branded, secure portal experience that builds trust and professionalism.</div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+function BusinessOutcomes() {
+  const outcomes = [
+    {
+      icon: "📈",
+      title: "Increase Estimator Capacity",
+      desc: "Handle more surveys and estimate opportunities without increasing headcount."
+    },
+    {
+      icon: "🎯",
+      title: "Improve Estimate Accuracy",
+      desc: "Reduce inventory omissions and create more reliable moving estimates."
+    },
+    {
+      icon: "⚡",
+      title: "Deliver Faster Quotes",
+      desc: "Shorten turnaround times and respond to customers more quickly."
+    },
+    {
+      icon: "🚛",
+      title: "Reduce On-Site Visits",
+      desc: "Minimize travel requirements with AI-powered remote surveys."
+    },
+    {
+      icon: "⭐",
+      title: "Improve Customer Experience",
+      desc: "Provide a modern, transparent, and convenient survey process."
+    },
+    {
+      icon: "💰",
+      title: "Lower Operational Costs",
+      desc: "Reduce survey expenses while improving operational efficiency."
+    }
+  ];
 
+  return (
+    <section className="outcomes-wrap">
+      <div className="outcomes">
+
+        <div className="outcomes-header">
+          <div className="section-badge">
+            Business Outcomes
+          </div>
+
+          <h2 className="outcomes-title">
+            Real Results for Moving Companies
+          </h2>
+
+          <p className="outcomes-sub">
+            MoveLogic AI helps moving companies streamline operations,
+            improve efficiency, and deliver a better customer experience.
+          </p>
+        </div>
+
+        <div className="outcomes-grid">
+          {outcomes.map((item) => (
+            <div className="outcomes-card" key={item.title}>
+              <div className="outcomes-icon">
+                {item.icon}
+              </div>
+
+              <h3 className="outcomes-card-title">
+                {item.title}
+              </h3>
+
+              <p className="outcomes-card-desc">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}
 /* ── DESIGNED FOR REAL ── */
 function DesignedForReal() {
   return (
@@ -258,8 +406,10 @@ export default function AboutPage() {
       <div className="ml-page"> 
         <Hero />
         <WhyExists />
+        <WhyWeBuilt />
         <AboutCompany />
         <WhatMakesDifferent />
+        <BusinessOutcomes />
         <DesignedForReal />
         <CTA /> 
       </div>

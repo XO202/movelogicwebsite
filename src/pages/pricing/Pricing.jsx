@@ -127,6 +127,7 @@ const FAQS = [
 ];
 
 /* ── PRICE CARD ── */
+
 function PriceCard({ plan }) {
   const { label, popular, price, currency, per, desc, includes, sectionLabel, features, cta, ctaStyle } = plan;
   return (
@@ -341,9 +342,151 @@ function FAQ() {
     </div>
   );
 }
-  
+function ROICalculator({
+  monthlySurveys,
+  setMonthlySurveys,
+  visitCost,
+  setVisitCost,
+  hourlyRate,
+  setHourlyRate,
+  annualSavings,
+  hoursSaved,
+  extraCapacity
+}) {
+  return (
+    <div className="roi-wrap">
+  <div className="roi">
+
+    <div className="roi-header">
+      <div className="roi-badge">
+        ROI Calculator
+      </div>
+
+      <h2 className="roi-title">
+        Estimate Your Potential ROI
+      </h2>
+
+      <p className="roi-sub">
+        Adjust the values below to estimate how MoveLogic AI could reduce site visits,
+        improve operational efficiency, and help your team handle more surveys.
+      </p>
+    </div>
+
+    <div className="roi-grid">
+
+      {/* Inputs */}
+      <div className="roi-form">
+
+        <div className="roi-field">
+          <label>
+            <span className="roi-label-icon">📋</span>
+            Monthly Survey Volume
+          </label>
+
+          <input
+            type="number"
+            value={monthlySurveys}
+            onChange={(e)=>setMonthlySurveys(Number(e.target.value))}
+          />
+        </div>
+
+        <div className="roi-field">
+          <label>
+            <span className="roi-label-icon">🚛</span>
+            Average Cost Per Site Visit ($)
+          </label>
+
+          <input
+            type="number"
+            value={visitCost}
+            onChange={(e)=>setVisitCost(Number(e.target.value))}
+          />
+        </div>
+
+        <div className="roi-field">
+          <label>
+            <span className="roi-label-icon">⏱</span>
+            Estimator Hourly Cost ($)
+          </label>
+
+          <input
+            type="number"
+            value={hourlyRate}
+            onChange={(e)=>setHourlyRate(Number(e.target.value))}
+          />
+        </div>
+
+      </div>
+
+      {/* Results */}
+      <div className="roi-results">
+
+        <div className="roi-result-card">
+          <div className="roi-result-icon">💰</div>
+
+          <div className="roi-result-label">
+            Estimated Annual Savings
+          </div>
+
+          <div className="roi-result-value">
+            ${annualSavings.toLocaleString()}
+          </div>
+        </div>
+
+        <div className="roi-result-card">
+          <div className="roi-result-icon">⏳</div>
+
+          <div className="roi-result-label">
+            Estimator Hours Saved
+          </div>
+
+          <div className="roi-result-value">
+            {hoursSaved.toLocaleString()}
+          </div>
+        </div>
+
+        <div className="roi-result-card">
+          <div className="roi-result-icon">📈</div>
+
+          <div className="roi-result-label">
+            Additional Survey Capacity
+          </div>
+
+          <div className="roi-result-value">
+            {extraCapacity.toLocaleString()}
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div className="roi-note">
+      <span>ℹ</span>
+      <span>
+        Results are estimates only and intended to illustrate potential efficiency gains.
+        Actual savings may vary depending on survey volume and business operations.
+      </span>
+    </div>
+
+  </div>
+</div>
+  );
+} 
 /* ── ROOT ── */
 export default function PricingPage() {
+  const [monthlySurveys, setMonthlySurveys] = useState(50);
+  const [visitCost, setVisitCost] = useState(150);
+  const [hourlyRate, setHourlyRate] = useState(35);
+
+  const annualSavings =
+    Math.round(monthlySurveys * visitCost * 12 * 0.65);
+
+  const hoursSaved =
+    Math.round(monthlySurveys * 1.5 * 12);
+
+  const extraCapacity =
+    Math.round(monthlySurveys * 0.4 * 12);
   return (
     <> 
       <div className="ml-page"> 
@@ -351,10 +494,21 @@ export default function PricingPage() {
         <TrustBar />
         <CompareTable />
         <WhyPays />
+        <ROICalculator
+          monthlySurveys={monthlySurveys}
+          setMonthlySurveys={setMonthlySurveys}
+          visitCost={visitCost}
+          setVisitCost={setVisitCost}
+          hourlyRate={hourlyRate}
+          setHourlyRate={setHourlyRate}
+          annualSavings={annualSavings}
+          hoursSaved={hoursSaved}
+          extraCapacity={extraCapacity}
+        />
         <FAQ /> 
         <CTA
-          title="Ready to medernise your moving estimates?"
-          description="Book a Demo and see how MoveLogic AI can help your team create faster surveys, imporove estimate accuracy, and deliver a better customer exeperience."
+          title="Ready to modernise your moving estimates?"
+          description="Book a Demo and see how MoveLogic AI can help your team create faster surveys, improve estimate accuracy, and deliver a better customer experience."
         />
       </div>
     </>

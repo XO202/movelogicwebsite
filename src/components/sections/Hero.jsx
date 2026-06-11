@@ -1,6 +1,7 @@
 import HeroDashboard from './HeroDashboard'
 
 import '../../styles/sections/hero.css'
+import { Link } from 'react-router-dom'
 
 function Hero() {
 
@@ -26,14 +27,19 @@ function Hero() {
                     </p>
 
                     <div className="hero-actions">
-
+                    
+                        <Link 
+                        to="/bookademo">
                         <button className="btn-hero-primary">
                             Book a Demo →
                         </button>
-
+                        </Link>
+                        <Link 
+                        to="/howitworks">
                         <button className="btn-hero-outline">
                            See How It Works  ⊙ <i className='fa fa-play-circle'></i>
                         </button>
+                        </Link>
 
                     </div>
 

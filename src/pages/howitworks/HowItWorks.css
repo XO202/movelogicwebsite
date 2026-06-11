@@ -508,11 +508,10 @@
 }
 
 .hiw-root {
-  background: var(--bg);
   color: var(--txt);
-  
-  min-height: 100vh;
   padding: 40px 48px;
+
+  
 }
 
 .hiw-header {

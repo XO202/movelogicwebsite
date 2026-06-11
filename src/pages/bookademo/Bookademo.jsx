@@ -14,7 +14,7 @@ function DemoHero() {
       <div className="ml-hero">
         <div>
           <div className="ph-badge">DEMO BUILT AROUND YOUR BUSINESS</div>
-          <h1 className="ph-title">
+          <h1 className="ph-title1">
           See MoveLogic AI in action <span className="c2">for your moving business. </span>
             
           </h1>

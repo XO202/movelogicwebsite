@@ -289,7 +289,7 @@
     margin-right: 24px;
   }
 
-  .ph-title {
+  .ph-title1 {
     font-size: 34px;
   }
  
@@ -314,7 +314,7 @@
     gap: 24px;
   }
 
-  .ph-title {
+  .ph-title1 {
     font-size: 28px;
     line-height: 1.2;
   }
@@ -414,7 +414,7 @@
 /* Small Mobile */
 @media (max-width: 480px) {
 
-  .ph-title {
+  .ph-title1 {
     font-size: 24px;
   }
 
@@ -665,7 +665,7 @@
   }
 
   /* Hero */
-  .ph-title,
+  .ph-title1,
   .hero-h2 {
     font-size: 64px;
     line-height: 1.1;
